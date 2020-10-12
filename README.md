@@ -27,7 +27,7 @@ solution 4 is just a bonus that i wanted to write because i tought about it.
             b. maybe the lower/ upper bound no tight enough?
             c. maybe something dynamic changing increment??
 
-           Final Solution - BEST - Sum Of Numbers!
+     Final Solution - BEST - Sum Of Numbers!
             i thought what did i do with the other approaches? i somehow divided/ broke it into smaller gaps
             lets try another method to break a number the formula of sum numbers! Sn = n(n+1)/2!
             we will use the numbers that eventually will give me something close to 100
@@ -35,7 +35,7 @@ solution 4 is just a bonus that i wanted to write because i tought about it.
             from 100 floors the worst case is: 14 because every time the plate not breaking we decrement the floor we jump
             and it will result in less values for the second plate.
 
-            ALGORITHM: O(sumOfNumbersEquation)
+     ALGORITHM: O(sumOfNumbersEquation)
             1. solve the sum of numbers equation: floors = n(n+1)/2 and round it up.
             2. this is your initial increment. (100 example is 14).
             3. throw the plate and check if the upperbound breaks here:
