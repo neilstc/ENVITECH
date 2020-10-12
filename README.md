@@ -18,11 +18,11 @@ solution 4 is just a bonus that i wanted to write because i tought about it.
             so by throwing the first plate i get a bound of possible floors that the second plate will break in.
             so the actual question is: from where should i drop it and how will i drop it?
 
-         2) square root approach BETTER: i will square root the number (√100 for example)
+  2) square root approach BETTER: i will square root the number (√100 for example)
             and then i'll jump that square root every time so the max drop will be 10
             for the first plate and then 9 for the exact floor so 10+9 = 19.
 
-         3) i'm sure there's a way to optimize it! so now i'm thinking where can i cut?
+  3) i'm sure there's a way to optimize it! so now i'm thinking where can i cut?
             a. maybe from the fact that every time the ball doesn't break the complexity going up by 1?
             b. maybe the lower/ upper bound no tight enough?
             c. maybe something dynamic changing increment??
@@ -44,7 +44,7 @@ solution 4 is just a bonus that i wanted to write because i tought about it.
             4. iterate from the lower bound to the upper bound and find exactly where it breaks.
             5. return that number.
 
-         4) OK this one might consider a cheat but i thought why not!
+   4) OK this one might consider a cheat but i thought why not!
             Binary search approach if we will consider the floors that the plate does not break in as 0's
             and the floors of that the plate does break as 1's we can binary search the solution!
             we can binary search the floor such that the the zero we are looking for will be next just under 1!
