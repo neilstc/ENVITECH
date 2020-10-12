@@ -78,7 +78,10 @@ public class Plates {
 
 //----------------- SOLUTION STARTS HERE -----------------\\
    public static int calculateIncrement(int floors){
-    // this function will solve the formula and return the right number.
+    /* this function will solve the formula and return the right number.
+       @params: int floors - number for the equation
+       @returns: the first floorIncrement.
+     */
         int a = 1;
         int b = 1;
         int c = -floors*2;
@@ -99,13 +102,24 @@ public class Plates {
 
     // that's the best one
     public static int sumOFNumbers(int breakingFloor, int floors){
+        /* final solution
+            @params:     breakingFloor - the floor that will break the plate,
+                         floors - how many floors in our building
+            @returns:    the minimal floor the plate breaking in.
+                         ,-1 if somethings wrong.
+         */
 
         //short circuits (corner cases)
         if(floors <= 0 || breakingFloor <= 0){
             System.out.println("invalid values! number of floor has to be at least 1 ");
             return -1;
         }
+        if(breakingFloor > floors){
+            System.out.println("the breaking floor can't be higher than the building! ");
+            return -1;
+        }
         if(floors == 1 && breakingFloor == 1 ) return 1;
+
 
 
         boolean firstPlateBroke = false;       // i just need to keep track on if it broke or not.
@@ -213,7 +227,7 @@ public class Plates {
 //        //2. square root approach - BETTER SOLUTION
 //        System.out.println("SQUARE ROOT: it will break on the: " +squareRoot(60,100) + " floor");
           //3. sum of numbers approach - FINAL ANSWER
-            System.out.println(sumOFNumbers(40, 100));
+            System.out.println(sumOFNumbers(99, 100));
 //        //4. binary search - MIGHT BE BEST MIGHT BE ILLEGAL O(log(n))
 //        int floorsArray [] = createFloorsArr(100);      //create and array the simulate the floors with 0 as non-breaking floors and 1 as breaking floors.
 //        System.out.println("BINARY SEARCH: it will break on: " + binarySearch(floorsArray));
